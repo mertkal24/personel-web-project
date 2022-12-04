@@ -1,0 +1,116 @@
+﻿@model MertKalKisisel.Models.guzel
+@{
+    ViewBag.Title = "Bilgisayar Mğhendisi Mert Kal";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    .Son5box {
+    }
+</style>
+
+<link href="~/css/MertKalStyleee.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+<link href="~/css/media.css" rel="stylesheet" />
+<div id="mk-slider" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner text-center">
+        <!--DİNAMİK-->
+        <div class="carousel-item active">
+            <section class="site-hero" style="background-image:url(https://images.unsplash.com/photo-1557599443-2071a2df9c19?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjUzNDZ9&auto=format&fit=crop&w=1982&q=80)" data-stellar-background-ratio="0.5">
+                <div class="container-fluid">
+                    <div class="row intro-text align-items-center justify-content-center">
+                        <div class="col-md-12 text-center">
+                            <div class="intro-text">
+                                @foreach (var item in Model.Tanitim)
+                                {
+                                    <div class="container" style="height:100vh;margin-top:25vh">
+                                        <img src="@item.foto" class="img-circle" /><br />
+                                        <h1><i>Merhaba Ben <strong>@item.AdSoyad</strong></i></h1>
+                                        <h2>@item.unvan</h2>
+                                        <p>Lise Eğitimim: @item.lise</p>
+                                        <p>Üniversite Eğitimim: @item.uni</p>
+                                        <p><a href="@Url.Action("About", "Home")" style="font-size:3vh" class="smoothscroll btn btn-secondary px-4 py-3">Hakkımda Daha Fazlası</a></p>
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <div class="carousel-item">
+            <section class="site-hero" style="background-image: url(https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80);width: 100%;background-size: cover" id="section-ana" data-stellar-background-ratio="0.5">
+                <div class="container-fluid">
+                    <div class="row intro-text align-items-center justify-content-center">
+                        <div class="col-md-12 text-center">
+                            <div class="intro-text " style="margin-top:25vh;">
+                                <img src="~/img/Mert-Kal-Resim.png" class="img-circle" />
+                                <h1 class="site-heading site-animate fadeInUp site-animated" style="color: white; font-size:30px"><strong> Becerilerim </strong></h1>
+                                <div class="container">
+                                    <ul>
+                                        @foreach (var item in Model.Yetenek)
+                                        {
+                                            <li style="font-size:3vh">@item.YetenekAdi</li>
+                                        }
+                                    </ul>
+                                </div>
+                                <p><a href="@Url.Action("About", "Home")" style="font-size:3vh" class="smoothscroll btn btn-secondary px-4 py-3">Hakkımda Daha Fazlası</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="carousel-item">
+            <section class="site-hero" style="background-image:url(https://images.unsplash.com/photo-1584947113830-1c274bd70063?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80);width: 100%;background-size: cover" id="section-ana" data-stellar-background-ratio="0.5">
+                <div class="container-fluid">
+                    <div class="row intro-text align-items-center justify-content-center">
+                        <div class="col-md-12 text-center">
+                            <div class="intro-text" style="margin-top:25vh">
+                                <img src="~/img/Mert-Kal-Resim.png" class="img-circle" />
+                                <h1 class="site-heading site-animate fadeInUp site-animated" style="color: white; font-size:30px"><strong> İlgi Alanlarım</strong></h1>                                 <ul>
+                                    @foreach (var item in Model.Ilgilan)
+                                    {
+                                        <li style="font-size:3vh">@item.ilgiAlanlarim</li>
+                                    }
+                                </ul>
+                                <p><a href="@Url.Action("About", "Home")" style="font-size:3vh" class="smoothscroll btn btn-secondary px-4 py-3">Hakkımda Daha Fazlası</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+    </div>
+    <a href="#mk-slider" class="carousel-control-prev" data-slide="prev">
+        <span class="carousel-control-prev-icon" style="margin-left:10%;margin-top:-50%"></span>
+
+    </a>
+    <a href="#mk-slider" class="carousel-control-next" data-slide="next">
+        <span class="carousel-control-next-icon" style="margin-right:10%;"></span>
+    </a>
+</div>
+<br />
+<div class="container">
+    <div class="col-6">
+        <div class="owl-carousel owl-theme">
+            @foreach (var item in Model.proje)
+            {
+                <div class="item">
+                    <div class="Son5box" style="background-color:transparent; float:left">
+                        <img src="@item.ProjeResim" /> <br />
+                        @item.ProjeAd<br />
+                        @item.ProjeAciklama<br />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+

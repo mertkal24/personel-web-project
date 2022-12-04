@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-reboot.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-reboot.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/MertKalStyleee.css" rel="stylesheet" />
+    <link href="~/css/media.css" rel="stylesheet" />
+    <link href="~/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/css/owl.theme.default.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Bilgisayar Mühendisi Mert Kal </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <section class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark  bg-soft-black" id="pb-navbar">
+            <div class="container">
+                <button class="navbar-toggler" style="color:white" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="@Url.Action("Index","Home")" class="navbar-brand" style="border:solid"><p><img src="~/img/binary-code.png" /><strong> M E R T K A L</strong></p> </a>
+
+                <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
+
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item text-white ">
+                            <a href="@Url.Action("Index","Home")" class="nav-link px-3 ">ANASAYFA</a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a href="@Url.Action("About","Home")" class="nav-link px-3">HAKKIMDA </a>
+                        </li>
+                        <li class="nav-item text-white ">
+                            <a href="@Url.Action("Projeler","Home")" class="nav-link  px-3">PROJELERİM </a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a href="@Url.Action("Contact","Home")" class="nav-link px-3">İLETİŞİM </a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a href="https://www.facebook.com/mert.kal.3/" class="nav-link px-3"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a href="https://www.instagram.com/_mertkal/?hl=tr" class="nav-link px-3"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a href="https://twitter.com/_MertK24" class="nav-link px-3"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li class="nav-item text-white">
+                            <a href="#" class="nav-link px-3"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    @RenderBody()
+    <footer style="background-color: black; color: white; margin-bottom:-15vh;">
+        <div class="container">
+            <div class="row" style="font-family: 'Indie Flower', cursive !important;">
+                <div class="col-md-4" style="margin-top:10vh; margin-bottom:5vh;">
+                    <div class="text-center">
+                        <h6 style="color:white; text-align: center; font-size:30px"> <b> @ViewBag.unvan </b><strong>@ViewBag.adsoyad</strong>  </h6>
+                        <p style="color: white; text-align: center; font-size:20px"><b>Adres:</b>  @ViewBag.adres </p>
+                        <p style="color: white; text-align: center; font-size:20px"><b>TELEFON NO:</b>+90 @ViewBag.telno </p>
+                        <p style="color: white; text-align: center; font-size:20px"><b>E-Mail Adresi: </b>@ViewBag.email</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="social">
+                        <div class="text-sm-left">
+                            <h6 style="color:white;text-align:center;margin-top:10vh;font-size:30px"><strong> Sosyal Medya Hesaplarım </strong></h6><br />
+                            <p style="text-align:center">
+                                <a href="https://www.facebook.com/mert.kal.3/" style="padding: 0 7px; font-size:20px; color: rgba(255,255,255,0.6);border:solid"><i class="fab fa-facebook"></i></a>
+                                <a href="#" style="padding: 0 7px; font-size:20px; color: rgba(255,255,255,0.6);border:solid"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://www.instagram.com/_mertkal/?hl=tr" style="padding: 0 7px; font-size:20px; color: rgba(255,255,255,0.6);border:solid"><i class="fab fa-instagram"></i></a>
+                                <a href="https://twitter.com/_MertK24" style="padding: 0 7px; font-size:20px; color: rgba(255,255,255,0.6);border:solid"><i class="fab fa-twitter"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" style="margin-top:10vh; margin-bottom:5vh;">
+                    <div class="text-center">
+                        <p style="font-size:20px;margin-top:2vh">Copyright © 2020. Her Hakkı Saklıdır. Sitemin herhangi bir şekilde kopyalanması, çoğaltılması ve dağıtılması halinde yasal haklarımız işletilecektir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script src="~/Scripts/jquery-3.5.1.js"></script>
+    <script src="~/js/owl.carousel.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        })
+    </script>    
+    <script>
+        var scrollPosition = 0;
+        $(window).scroll(function () {
+            var currenPosition = $(this).scrollTop();
+
+            if (currenPosition > scrollPosition) {
+                //alert("scroll aşağı");
+                $("#pb-navbar").slideUp(1500);
+                $("#pb-navbar").css({
+                    height: "20px"
+                })
+            } else {
+                //alert = ("scroll yukarı");
+                $("#pb-navbar").slideDown(1500);
+            }
+            scrollPosition = currenPosition;
+        });
+
+    </script>
+</body>
+</html>
+

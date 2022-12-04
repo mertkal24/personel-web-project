@@ -1,0 +1,94 @@
+﻿@using MertKalKisisel.Models
+@model List<HAKKIMDA>
+@{
+    ViewBag.Title = "Yetenek";
+    Layout = "~/Areas/admin/Views/Shared/_adminLayout.cshtml";
+}
+<style>
+    #mk {
+        display: none;
+    }
+    #Cvgnc {display: none;}
+</style>
+<link href="~/css/sweetalert2.min.css" rel="stylesheet" />
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Hakkımda Bölümü Düzenleme</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index","AdminAna")">Home</a></li>
+                        <li class="breadcrumb-item active">@Url.Action("Index", "Mesajlar")</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <div id="icrk" class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Tanitim Bilgileri</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                            <tr><th>Foto</th><th>Başlik</th><th>Aciklama</th><th>Cv</th><th>Duzenle</th></tr>
+                            </thead>
+                            <tbody id="kayitlar">
+                               @foreach(var item in Model)
+                               {
+                                   <tr>
+                                       <td><img id="f-@item.Id" style ="width:200px;height:200px"src="@item.foto"/></td>
+                                       <td><div id="b-@item.Id">@item.baslik</div></td>
+                                       <td><div id="a-@item.Id">@item.aciklama</div></td>
+                                       <td> <div id="c-@item.Id">@item.cv</div></td>
+                                       <td><button style="width:200px"id="@item.Id" class="btn btn-info gncbtn">Düzenle</button><br />
+                                           <button style="margin-top:5%;width:200px" id="@item.Id" class="btn btn-success ft">Foto Güncelle</button><br />
+                                           <button style="margin-top:5%;width:200px"id="@item.Id" class="btn btn-success cvv">Cv Güncelle</button>
+                                          
+                                       </td>
+                                   </tr>
+                               }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="mk">
+                    <h1>Fotoğraf Güncelle</h1>
+                    <div class="form-group col-md-4">
+                        <input type="file" class="form-control" id="files" multiple />
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="button" id="btnUpload" class="btn btn-info snd" value="Upload Files" />
+                        <input class="btn btn-danger" type="button" id="vazgec1" name="name" value="Vazgeç" />
+                    </div>
+                </div>
+                <div id="Cvgnc">
+                    <h1>Cv Güncelle</h1>
+                    <div class="form-group col-md-4">
+                        <input type="file" class="form-control" id="files1" multiple />
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="button" id="btnUpload" class="btn btn-info sndcv" value="Upload Files" />
+                        <input class="btn btn-danger" type="button" id="vazgec1" name="name" value="Vazgeç" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+
+
+
+<script src="~/Scripts/jquery-3.5.1.min.js"></script>
+<script src="~/js/hakkimda.js"></script>
+<script src="~/js/sweetalert2.min.js"></script>

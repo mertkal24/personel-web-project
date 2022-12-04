@@ -1,0 +1,16 @@
+  function Veriler() {
+    var url = '/Yetenekler/Veriler';
+    $('#kayitlar').html(" ");
+    $.getJSON(url, function (data) {
+        for (var item in data.Result) {
+            var gunc = '<td><input style="width:200px" type="button" class="btn btn-success cvv" value="Cv Guncelle" id=' + data.Result[item].Id + '></td>';
+            var sil = '<td><button style="width:200px" class="btn btn-info gncbtn" id=' + data.Result[item].Id + '>' + 'İçerikleri Güncelle</button></td>';
+            var ıdd = '<td>' + data.Result[item].YetenekID + '</td>'
+            var bdd = '<td>' + data.Result[item].YetenekAdi + '</td>'
+            var deger = '<tr>' + ıdd + bdd + gunc + sil + '</tr>'
+            $("#kayitlar").prepend(deger);
+        }
+
+    });
+
+}

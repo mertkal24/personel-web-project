@@ -1,0 +1,129 @@
+@media screen and (min-width:766px) and (max-width:992px) {
+    .navbar-expand-lg .navbar-nav .nav-item .nav-link {
+        color: white;
+        font-family: 'Oswald', sans-serif !important;
+        font-size: 20px;
+    }
+        /*NAVLINK NORMAL GORUNUM*/
+        .navbar-expand-lg .navbar-nav .nav-item .nav-link:hover {
+            color: #aeec14;
+            border: solid;
+            font-size: 25px;
+        }
+        
+    /*NAVLÝNK ÜSTÜNE MAUS GOTURULUNCE*/
+    .navbar-expand-lg .navbar-brand {
+        color: white;
+        font-family: 'Oswald', sans-serif !important;
+        font-size: 20px;
+        border: none;
+    }
+    
+        /**NAVBAR BRAND NORMAL GORUNUM*/
+        .navbar-expand-lg .navbar-brand:hover {
+            color: #aeec14;
+            font-size:25px;
+            border: solid;
+        }
+    /*NAVBAR BRAND USTUNE MAUS GOTURULUNCE*/
+    .fa-facebook {
+        color: white;
+    }
+        /*FACEBOOK IKON NORMAL GORUNUM*/
+        .fa-facebook:hover {
+            color: #aeec14;
+        }
+    /*FACEBOOK IKON USTUNE MAUSE GOTURULUNCE*/
+    .fa-instagram {
+        color: white;
+    }
+        /*INSTAGRAM IKON NORMAL GORUNUM*/
+        .fa-instagram:hover {
+            color: #aeec14;
+        }
+    /*INSTAGRAM IKON USTUNE MAUSE GOTURULUNCE*/
+    .fa-linkedin {
+        color: white;
+    }
+        /*LINKEDIN IKON NORMAL GORUNUM*/
+        .fa-linkedin:hover {
+            color: #aeec14;
+        }
+    /*LINKEDIN IKON USTUNE MAUSE GOTURULUNCE*/
+    .fa-twitter {
+        color: white;
+    }
+        /*TWÝTTER IKON NORMAL GORUNUM*/
+        .fa-twitter:hover {
+            color: #aeec14;
+        }
+    /*TIWITTER IKON USTUNE MAUSE GOTURULUNCE*/
+    /*NAVBAR CSS BÝTÝÞ*/
+    
+}
+@media screen and (min-width:993px) and (max-width:1200px) {
+    .navbar-expand-lg .navbar-nav .nav-item .nav-link {
+        color: white;
+        font-family: 'Oswald', sans-serif !important;
+        font-size: 20px;
+    }
+        /*NAVLINK NORMAL GORUNUM*/
+        .navbar-expand-lg .navbar-nav .nav-item .nav-link:hover {
+            color: #aeec14;
+            border: solid;
+            font-size: 25px;
+        }
+
+    /*NAVLÝNK ÜSTÜNE MAUS GOTURULUNCE*/
+    .navbar-expand-lg .navbar-brand {
+        color: white;
+        font-family: 'Oswald', sans-serif !important;
+        font-size: 20px;
+        border: none;
+    }
+
+        /**NAVBAR BRAND NORMAL GORUNUM*/
+        .navbar-expand-lg .navbar-brand:hover {
+            color: #aeec14;
+            font-size: 25px;
+            border: solid;
+        }
+    /*NAVBAR BRAND USTUNE MAUS GOTURULUNCE*/
+    .fa-facebook {
+        color: white;
+    }
+        /*FACEBOOK IKON NORMAL GORUNUM*/
+        .fa-facebook:hover {
+            color: #aeec14;
+        }
+    /*FACEBOOK IKON USTUNE MAUSE GOTURULUNCE*/
+    .fa-instagram {
+        color: white;
+    }
+        /*INSTAGRAM IKON NORMAL GORUNUM*/
+        .fa-instagram:hover {
+            color: #aeec14;
+        }
+    /*INSTAGRAM IKON USTUNE MAUSE GOTURULUNCE*/
+    .fa-linkedin {
+        color: white;
+    }
+        /*LINKEDIN IKON NORMAL GORUNUM*/
+        .fa-linkedin:hover {
+            color: #aeec14;
+        }
+    /*LINKEDIN IKON USTUNE MAUSE GOTURULUNCE*/
+    .fa-twitter {
+        color: white;
+    }
+        /*TWÝTTER IKON NORMAL GORUNUM*/
+        .fa-twitter:hover {
+            color: #aeec14;
+        }
+    /*TIWITTER IKON USTUNE MAUSE GOTURULUNCE*/
+    /*NAVBAR CSS BÝTÝÞ*/
+
+}
+
+
+

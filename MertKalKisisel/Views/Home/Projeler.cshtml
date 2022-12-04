@@ -1,0 +1,39 @@
+﻿@using MertKalKisisel.Models
+@model List<Projeler>
+
+@{
+    ViewBag.Title = "Projelerim";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+
+    <link href="~/css/MertKalStyleee.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link href="~/css/media.css" rel="stylesheet" />
+</head>
+<style>
+    body {
+        background-image: url(https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+    }
+</style>
+<body>
+    <div class="container" style="margin-top:15vh;">
+        <div class="col-6">
+            <h1 style="color:white; text-align:center">Projelerim</h1>
+            <div class="owl-carousel owl-theme">
+                @foreach (var item in Model)
+                {
+                    <div class="item">
+                        <div class="Son5box" style="background-color:transparent; float:left;color:white">
+                            <img src="@item.ProjeResim" /> <br />
+                            <p style="font-size:15px">@item.ProjeAd</p><br />
+                            <a href="/Home/ProjeAyrinti/@item.IDProje" class="btn btn-info">Proje Ayrıntıları</a>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+</body>

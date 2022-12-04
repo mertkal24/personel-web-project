@@ -1,0 +1,28 @@
+﻿@model MertKalKisisel.Models.guzel
+@{
+    ViewBag.Title = "ProjeAyrinti";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    .mert{
+        border:2px solid;
+        text-align: center;
+        height:100vh;
+        width:100vh;
+        margin-bottom:20vh;
+        margin-left:20%;
+    }
+</style>
+
+<div class=" container" style="height:120vh; margin-top:20vh; margin-bottom:30vh;">
+    <h2 style="text-align:center;font-size:30px;margin-bottom:2vh">@ViewBag.adi</h2>
+    <div class="mert">
+        <img style="height:70%;width:70%" src="@ViewBag.foto" /><br />
+        <p style="font-size:25px">@ViewBag.adi </p> <br />
+        <p>@ViewBag.aciklama </p> <br />
+
+    </div>
+    
+   
+</div>

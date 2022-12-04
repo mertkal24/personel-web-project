@@ -1,0 +1,66 @@
+
+$(document).on('click', '.Guncelle', function () {
+    var id = $(this).attr('id');
+    $.ajax({
+        url: '/Yetenekler/GuncJson',
+        type: 'post',
+        dataType: 'json',
+        data: { 'id': id },
+        success: async function (veri) {
+            const { value: formValues } = await Swal.fire({
+
+                title: 'Güncelleme',
+                showCancelButton: true,
+                cancelButtonText: 'Vazgeç',
+                cancelButtonColor: '#d43f3a',
+                confirmButtonColor: '#337ab7',
+                confirmButtonText: 'Onayla',
+                html:
+                    '<label>ID</label>'+
+                    '<input id="ID" value=' + veri.Result.YetenekID + ' class="swal2-input" readonly="readonly" >' +
+                    '<label>Yetenek Adı</label>'+
+                    '<textarea id="YET" class="swal2-input"' + 'value="' + veri.Result.YetenekAdi + '">' + veri.Result.YetenekAdi + '</textarea>',                  
+
+                focusConfirm: false,
+                preConfirm: () => {
+                    return [
+                        document.getElementById('ID').value,
+                        document.getElementById('YET').value,                       
+
+                    ]
+                }
+
+            });
+
+
+            $.ajax({
+                url: '/Yetenekler/GuncJ',
+                type: 'post',
+                dataType: 'json',
+                data: { 'ID': id, 'YET': formValues[1]},
+                success: function (dgr) {                   
+                        
+                    if (dgr == '1') {
+                        var bb = dgr
+                        Swal.fire({
+                            type: 'success',
+                            title: 'Güncellendi',
+                            text: 'İşlem başarılı!',
+
+                        })
+                        
+                    }
+                    else {
+                        Swal.fire({
+                            type: 'error',
+                            title: 'Güncellenmedi!',
+                            text: 'Bir Hata Oluştu!'
+                        })
+                    }
+                }
+            })
+        }
+    })
+   
+
+});

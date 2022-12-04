@@ -1,0 +1,74 @@
+﻿@model MertKalKisisel.Models.guzel
+@{
+    ViewBag.Title = "Projeler";
+    Layout = "~/Areas/admin/Views/Shared/_adminLayout.cshtml";
+}
+<style>
+    #mk{
+        display:none;
+    }
+</style>
+
+<div class="content-wrapper">
+    <section class="content">
+        <div class="row">
+            <div class="col-12">
+                <div  id="icrk"class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Projeler</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div  class="card-body">
+                        <button  style="margin-bottom:2%"class="btn btn-success" id="Yeni">Proje Ekle</button>
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Proje Id</th>
+                                    <th>Proje Fotoğrafı</th>
+                                    <th>Proje Adı</th>
+                                    <th>Proje Açıklaması</th>
+                                    <th>Ekleme Tarihi</th>
+                                    <th>Düzenle</th>
+                                    <th>Sil</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.proje)
+                                {
+                                    <tr id="kafa-@item.IDProje">
+                                        <td>@item.IDProje</td>
+                                        <td><img id="foto-@item.IDProje" style="width:100px;height:100px" src="@item.ProjeResim" /></td>
+                                        <td><div id="ad-@item.IDProje">@item.ProjeAd</div></td>
+                                        <td><div id="ack-@item.IDProje">@item.ProjeAciklama </div></td>
+                                        <td><div id="tarih-@item.IDProje">@item.eklemetarihi</div></td>
+                                        <td>
+                                            <button style="width:150px" class="btn btn-success Guncelle" id="@item.IDProje">Güncelle</button><br />
+                                            <button style="width:150px;margin-top:7%" class="btn btn-success FotoGuncelle" id="@item.IDProje">Foto Güncelle</button>
+                                        </td>
+                                        <td><button class="btn btn-danger Sil" id="@item.IDProje">Sil</button></td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="mk">
+                    <h1>Fotoğraf Güncelle</h1>
+                    <div class="form-group col-md-4">
+                        <input type="file" class="form-control" id="files" multiple />
+                    </div>
+                    <div class="form-group col-md-4">
+                        <input type="button" id="btnUpload" class="btn btn-info snd" value="Upload Files" />
+                        <input class="btn btn-danger" type="button" id="vazgec1" name="name" value="Vazgeç" />
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+    </section>
+</div>
+
+<script src="~/Scripts/jquery-3.5.1.min.js"></script>
+<script src="~/Content/admin/plugins/jquery/jquery.min.js"></script>
+<script src="~/js/projeler.js"></script>
+<script src="~/js/sweetalert2.min.js"></script>
